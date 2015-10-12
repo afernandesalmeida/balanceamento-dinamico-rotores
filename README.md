@@ -1,0 +1,2 @@
+## Balanceamento dinâmico de rotores
+Script desenvolvido com a finalidade de calcular o balaceamento estático e dinâmico de um sistema, dado as massas e a posição das mesmas ao longo do sistema. Ver comentários.

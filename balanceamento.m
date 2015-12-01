@@ -39,3 +39,17 @@ mr_D = ((((m_A*r_A*sin(t_A)*z_A - m_C*r_C*sin(t_C)*z_C - m_E*r_E*sin(t_E)*z_E)^2
 
 % Calculo da massa de D
 m_D=mr_D/r_D
+
+% Calculo de teta B
+%(Eq. desenvolvida a partir do somatorio de Forças em X e Y)
+t_B = atan2((-m_A*r_A*sin(t_A) - m_C*r_C*sin(t_C) - m_D*r_D*sin(t_D) - m_E*r_E*sin(t_E)),(-m_A*r_A*cos(t_A) - m_C*r_C*cos(t_C) - m_D*r_D*cos(t_D) - m_E*r_E*cos(t_E)));
+
+% Conversão de teta B de radianos para graus tornando de fácil entendimento
+%para o usuário
+teta_B =radtodeg(t_B)
+
+% Calculo de m_B*r_B
+mr_B = (((-m_A*r_A*sin(t_A) - m_C*r_C*sin(t_C) - m_D*r_D*sin(t_D) - m_E*r_E*sin(t_E))^2) + ((-m_A*r_A*cos(t_A) - m_C*r_C*cos(t_C) - m_D*r_D*cos(t_D) - m_E*r_E*cos(t_E))^2))^(1/2);
+
+% Calculo da massa de B
+m_B=mr_B/r_B

@@ -53,3 +53,11 @@ mr_B = (((-m_A*r_A*sin(t_A) - m_C*r_C*sin(t_C) - m_D*r_D*sin(t_D) - m_E*r_E*sin(
 
 % Calculo da massa de B
 m_B=mr_B/r_B
+
+% Verificação do balanceamento
+Fx = (m_A*r_A*cos(t_A) + m_B*r_B*cos(t_B) + m_C*r_C*cos(t_C) + m_D*r_D*cos(t_D) + m_E*r_E*cos(t_E))/1000
+Fy = (m_A*r_A*sin(t_A) + m_B*r_B*sin(t_B) + m_C*r_C*sin(t_C) + m_D*r_D*sin(t_D) + m_E*r_E*sin(t_E))/1000
+
+R = sqrt((Fx^2) + (Fy^2))
+t_R = atan2(Fy,Fx);
+teta_R = radtodeg(t_R)
